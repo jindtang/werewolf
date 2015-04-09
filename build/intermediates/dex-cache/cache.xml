@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-01f16a4593bbd1139115670e2db6b75a905a9dd5.jar" />
+    </item>
+    <item
+        jar="/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/debug/classes-8266b3d03ff083188a127f3fa670ccf93a9401a3.jar" />
+    </item>
+    <item
+        jar="/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/debug/classes-bfa3373c51dfb4e3f42467d440cfb457e9362099.jar" />
+    </item>
+    <item
+        jar="/Users/Fang Tang/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-faa2c80042f02708d34d55909f352f200cab861e.jar" />
+    </item>
+
+</items>

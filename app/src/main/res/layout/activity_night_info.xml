@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="
+              The game begins with a night phase.
+\n
+             At night, the moderator says, &quot;Werewolves, open your eyes.&quot; The players who received werewolf roles should silently open their eyes and recognize each other; the moderator should note who the werewolves are. Once the moderator knows who the wolves are, and has made sure that the wolves know each other, the moderator says, &quot;Werewolves, pick someone to kill.&quot; The werewolves should silently agree on one person. Both wolves must agree on one victim.
+\n
+             Once the moderator understands who the intended victim is, she says, &quot;Werewolves, close your eyes.&quot;  Once the wolves have closed their eyes, the moderator says, &quot;Seer, open your eyes.&quot; The player who received a seer card should open her eyes. The moderator then says, &quot;Seer, pick someone to identify.&quot; The seer should then silently indicate one person. When the moderator understands who has been chosen, she silently indicates to the seer whether that person is a werewolf or not, by giving a thumbs-up signal if the chosen person is indeed a wolf, or a thumbs-down if they are a villager.
+\n
+             Once this information has been conveyed, the moderator says, &quot;Seer, close your eyes.&quot;"
+
+            android:id="@+id/textView17"
+            android:layout_below="@+id/textView17"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:maxLines = "1000"
+            android:scrollbars = "vertical"
+            />
+    </RelativeLayout>
+</LinearLayout>

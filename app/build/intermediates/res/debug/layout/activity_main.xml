@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select number of players"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:id="@+id/activity6"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/activity7"
+        android:layout_alignStart="@+id/activity7"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:id="@+id/activity7"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/activity6"
+        android:layout_alignLeft="@+id/activity8"
+        android:layout_alignStart="@+id/activity8"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:id="@+id/activity8"
+        android:layout_below="@+id/activity7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:id="@+id/activity9"
+        android:layout_below="@+id/activity8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:id="@+id/activity10"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/activity9"
+        android:layout_alignLeft="@+id/activity9"
+        android:layout_alignStart="@+id/activity9" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="!"
+        android:id="@+id/info"
+        android:layout_alignTop="@+id/activity6"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:textSize="30dp"
+        android:textColor="#ffff1a00"
+        android:background="@drawable/roundbutton"
+        android:onClick="info"/>
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Lin/Dropbox/Werewolf/app/src/main/res/layout/activity_main.xml -->

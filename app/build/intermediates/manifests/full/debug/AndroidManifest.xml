@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jindtang.werewolf"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="jindtang.werewolf.MainActivity"
+            android:label="@string/title_activity_startgame"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.DisplayActivity"
+            android:label="@string/user_activity_display"
+            android:parentActivityName="jindtang.werewolf.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jindtang.werewolf.MainActivity" />
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Daytime"
+            android:label="@string/title_activity_daytime"
+            android:parentActivityName="jindtang.werewolf.DisplayActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jindtang.werewolf.DisplayActivity" />
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Night"
+            android:label="@string/title_activity_night"
+            android:parentActivityName="jindtang.werewolf.DisplayActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jindtang.werewolf.DisplayActivity" />
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Createrole"
+            android:label="@string/title_activity_createrole" >
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Startgame"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Information"
+            android:label="@string/title_activity_information" >
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Settingup"
+            android:label="@string/title_activity_settingup" >
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Night_info"
+            android:label="@string/title_activity_night_info" >
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Day_info"
+            android:label="@string/title_activity_day_info" >
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Victory"
+            android:label="@string/title_activity_victory" >
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Winner_w"
+            android:label="@string/title_activity_winner_w" >
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Winner_v"
+            android:label="@string/title_activity_winner_v" >
+        </activity>
+    </application>
+
+</manifest>

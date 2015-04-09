@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:context=".DisplayActivity"
+    android:background="@drawable/players"
+    android:id="@+id/layout_9" >
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Click on the player who has been killed"
+            android:id="@+id/killtext"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="30dp"
+            android:visibility="invisible"
+            android:gravity="center_horizontal"
+            android:background="#ffffff"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player1"
+            android:id="@+id/player1_9"
+            android:layout_marginLeft="46dp"
+            android:layout_marginStart="46dp"
+            android:layout_below="@+id/killtext"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player2"
+            android:id="@+id/player2_9"
+            android:layout_alignTop="@+id/player1_9"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginEnd="50dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player3"
+            android:id="@+id/player3_9"
+            android:layout_marginTop="70dp"
+            android:layout_below="@+id/killtext"
+            android:layout_alignLeft="@+id/player1_9"
+            android:layout_alignStart="@+id/player1_9" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player4"
+            android:id="@+id/player4_9"
+            android:layout_alignTop="@+id/player3_9"
+            android:layout_alignLeft="@+id/player2_9"
+            android:layout_alignStart="@+id/player2_9" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player5"
+            android:id="@+id/player5_9"
+            android:layout_marginTop="240dp"
+            android:layout_alignLeft="@+id/player3_9"
+            android:layout_alignStart="@+id/player3_9" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player6"
+            android:id="@+id/player6_9"
+            android:layout_marginTop="240dp"
+            android:layout_alignLeft="@+id/player4_9"
+            android:layout_alignStart="@+id/player4_9" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/next"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/player6_9"
+            android:layout_alignEnd="@+id/player6_9"
+            android:onClick="startGame"
+            android:textSize="18dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player7"
+            android:id="@+id/player7_9"
+            android:layout_below="@+id/player5_9"
+            android:layout_alignLeft="@+id/player5_9"
+            android:layout_alignStart="@+id/player5_9"
+            android:layout_marginTop="39dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player8"
+            android:id="@+id/player8_9"
+            android:layout_alignTop="@+id/player7_9"
+            android:layout_alignLeft="@+id/player6_9"
+            android:layout_alignStart="@+id/player6_9" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player9"
+            android:id="@+id/player9_9"
+            android:layout_marginTop="410dp"
+
+            android:layout_alignLeft="@+id/player7_9"
+            android:layout_alignStart="@+id/player7_9" />
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/C:/Users/Lin/Dropbox/Werewolf/app/src/main/res/layout/activity9.xml -->

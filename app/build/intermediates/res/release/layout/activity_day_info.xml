@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="
+               Once the seer has closed her eyes, the moderator says, &quot;It is day, and so-and-so was killed in the night.&quot; (indicating the person who was chosen by the werewolves during the night phase). That person is now dead; moderator reveals his role to all players, so that everyone knows the role of the dead person.
+\n
+            As mentioned above, dead players are out of the game. When someone is declared dead by the moderator, they must refrain from hobnobbing with those still living -- this means no saying &quot;I know who it is!&quot; or anything like that.
+\n
+            Now the villagers must vote on who to lynch. As soon as a majority of living players are voting for a single player, that player is declared dead and the next night phase begins.
+\n
+            In general, the players will engage in heated discussion in an attempt to gather sufficient support for a particular lynch victim.  Any living player may say anything she pleases. Lying is allowed in all forms and fashions. It is perfectly legal for a wolf to claim to be the seer, or for a player to intentionally misstate earlier events.
+\n
+            The moderator should remain neutral and refrain from interfering in the discussion. It is appropriate, however, for the moderator to truthfully answer direct questions from living players about the number and type of players remaining in the game. (In other words, if someone asks, the moderator should tell them whether both wolves are still alive or one has been killed, or whether the seer was killed, etc.)  It is, however, completely verboten for a living player to actually reveal her card.  The basic strategy is as follows. The wolves are trying to pretend like they&apos;re not wolves, because if the villagers realize who the wolves are they will lynch them in short order. The villagers are trying to interpret the actions of other players and deduce who the wolves are. The seer is trying to throw suspicion on the wolves (if he knows who they are) and keep it off players she knows to be innocent -- but she must do this subtly, because if the werewolves figure out who the seer is, they will kill her during the night (since the seer is the biggest threat to the werewolves).
+\n
+            Again, dead players are excluded from this hullabaloo. They can listen all they want, but may not say anything.  A few things that always seem to come up: Yes, a majority of all living players, including the person being voted on; if there are 10 players alive, for example, there must be 6 votes on one player to lynch (5 is not enough). Yes, there must be a lynching every day; no namby-pamby we-don&apos;t-wanna-lynch-anybody nonsense in this village.  Also, it is important that the moderator pay close attention to the voting. As soon as a majority of players is voting for a single victim, that victim is immediately dead and night begins. Any last words or pleas for mercy must be given before the majority rules; once the lynch takes place, the lynched person may not say anything more for the rest of the game.  When a player is lynched, the moderator reveals that player&apos;s identity to the other players, so they can see whether they have lynched a werewolf (yay), a villager (oh well), or the seer (oops). Night begins immediately; no further discussion is permitted until the following day.  Dead players are permitted to keep their eyes open at all times, and thus see everything that happens at night, but of course they must keep quiet about it so as not to influence the actions of the living players."
+            android:id="@+id/textView19"
+            android:layout_below="@+id/textView19"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:maxLines = "1000"
+            android:scrollbars = "vertical"/>
+    </RelativeLayout>
+</LinearLayout><!-- From: file:/Users/Fang%20Tang/Dropbox/Spring%202015/Mobile%20Comp/AndroidProjects/Werewolf/app/src/main/res/layout/activity_day_info.xml -->

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:context=".DisplayActivity"
+    android:background="@drawable/players"
+    android:id="@+id/layout_6" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Click on the player who has been killed"
+            android:id="@+id/killtext"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="30dp"
+            android:visibility="invisible"
+            android:gravity="center_horizontal"
+            android:background="#ffffff"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player1"
+            android:id="@+id/player1_6"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="110dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player2"
+            android:id="@+id/player2_6"
+            android:layout_alignTop="@+id/player1_6"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginEnd="50dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player3"
+            android:id="@+id/player3_6"
+            android:layout_below="@+id/player1_6"
+            android:layout_marginTop="60dp"
+            android:layout_alignLeft="@+id/player1_6"
+            android:layout_alignStart="@+id/player1_6" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player4"
+            android:id="@+id/player4_6"
+            android:layout_above="@+id/player5_6"
+            android:layout_alignLeft="@+id/player2_6"
+            android:layout_alignStart="@+id/player2_6" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player5"
+            android:id="@+id/player5_6"
+            android:layout_below="@+id/player3_6"
+            android:layout_alignLeft="@+id/player3_6"
+            android:layout_alignStart="@+id/player3_6"
+            android:layout_marginTop="60dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player6"
+            android:id="@+id/player6_6"
+            android:layout_alignTop="@+id/player5_6"
+            android:layout_alignLeft="@+id/player4_6"
+            android:layout_alignStart="@+id/player4_6" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/next"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/player6_6"
+            android:layout_alignEnd="@+id/player6_6"
+            android:onClick="startGame"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+</LinearLayout>

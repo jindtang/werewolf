@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ultimate Werewolf</string>
+    <string name="user_activity_display">User Select</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_night">Night</string>
+    <string name="title_activity_daytime">Daytime</string>
+    <string name="title_activity_createrole">createrole</string>
+    <string name="title_activity_startgame">startgame</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_information">Information</string>
+    <string name="title_activity_settingup">Settingup</string>
+    <string name="title_activity_night_info">Night_info</string>
+    <string name="title_activity_day_info">Day_info</string>
+    <string name="title_activity_victory">Victory</string>
+    <string name="title_activity_winner_w">Winner_w</string>
+    <string name="title_activity_winner_v">Winner_v</string>
+    <string name="title_activity_transition">Transition</string>
+    <string name="new_game">New Game</string>
+
+</resources>

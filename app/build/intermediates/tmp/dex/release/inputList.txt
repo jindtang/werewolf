@@ -1,0 +1,5 @@
+/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/classes/release
+/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/release/support-annotations-21.0.3-faa2c80042f02708d34d55909f352f200cab861e.jar
+/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/release/internal_impl-21.0.3-01f16a4593bbd1139115670e2db6b75a905a9dd5.jar
+/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/release/classes-bfa3373c51dfb4e3f42467d440cfb457e9362099.jar
+/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/release/classes-8266b3d03ff083188a127f3fa670ccf93a9401a3.jar

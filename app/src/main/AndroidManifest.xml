@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jindtang.werewolf" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_startgame"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DisplayActivity"
+            android:label="@string/user_activity_display"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jindtang.werewolf.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Daytime"
+            android:label="@string/title_activity_daytime"
+            android:parentActivityName=".DisplayActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jindtang.werewolf.DisplayActivity" />
+        </activity>
+        <activity
+            android:name=".Night"
+            android:label="@string/title_activity_night"
+            android:parentActivityName=".DisplayActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jindtang.werewolf.DisplayActivity" />
+        </activity>
+        <activity
+            android:name=".Createrole"
+            android:label="@string/title_activity_createrole" >
+        </activity>
+        <activity
+            android:name=".Startgame"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Information"
+            android:label="@string/title_activity_information" >
+        </activity>
+        <activity
+            android:name=".Settingup"
+            android:label="@string/title_activity_settingup" >
+        </activity>
+        <activity
+            android:name=".Night_info"
+            android:label="@string/title_activity_night_info" >
+        </activity>
+        <activity
+            android:name=".Day_info"
+            android:label="@string/title_activity_day_info" >
+        </activity>
+        <activity
+            android:name=".Victory"
+            android:label="@string/title_activity_victory" >
+        </activity>
+        <activity
+            android:name=".Winner_w"
+            android:label="@string/title_activity_winner_w" >
+        </activity>
+        <activity
+            android:name=".Winner_v"
+            android:label="@string/title_activity_winner_v" >
+        </activity>
+    </application>
+
+</manifest>

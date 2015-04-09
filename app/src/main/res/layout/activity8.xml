@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:context=".DisplayActivity"
+    android:background="@drawable/players"
+    android:id="@+id/layout_8" >
+
+    <!--<fragment android:name="jindtang.werewolf.Createrole"-->
+    <!--android:id="@+id/createrole_fragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp" />-->
+
+    <!--<TableLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="center_horizontal"></TableLayout>-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/fragment_container"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Click on the player who has been killed"
+            android:id="@+id/killtext"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="30dp"
+            android:visibility="invisible"
+            android:gravity="center_horizontal"
+            android:background="#ffffff"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player1"
+            android:id="@+id/player1_8"
+            android:layout_marginLeft="52dp"
+            android:layout_marginStart="52dp"
+            android:layout_below="@+id/killtext"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player2"
+            android:id="@+id/player2_8"
+            android:layout_alignTop="@+id/player1_8"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginEnd="50dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player3"
+            android:id="@+id/player3_8"
+            android:layout_marginTop="46dp"
+            android:layout_below="@+id/player1_8"
+            android:layout_alignLeft="@+id/player1_8"
+            android:layout_alignStart="@+id/player1_8" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player4"
+            android:id="@+id/player4_8"
+            android:layout_alignTop="@+id/player3_8"
+            android:layout_alignLeft="@+id/player2_8"
+            android:layout_alignStart="@+id/player2_8" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player5"
+            android:id="@+id/player5_8"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/player3_8"
+            android:layout_alignLeft="@+id/player3_8"
+            android:layout_alignStart="@+id/player3_8" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player6"
+            android:id="@+id/player6_8"
+            android:layout_alignTop="@+id/player5_8"
+            android:layout_alignLeft="@+id/player4_8"
+            android:layout_alignStart="@+id/player4_8" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player7"
+            android:id="@+id/player7_8"
+            android:layout_marginTop="46dp"
+            android:layout_below="@+id/player5_8"
+            android:layout_alignLeft="@+id/player5_8"
+            android:layout_alignStart="@+id/player5_8" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player8"
+            android:id="@+id/player8_8"
+            android:layout_alignTop="@+id/player7_8"
+            android:layout_alignLeft="@+id/player6_8"
+            android:layout_alignStart="@+id/player6_8" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/next"
+            android:layout_marginBottom="46dp"
+            android:onClick="startGame"
+            android:textSize="18dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/player8_8"
+            android:layout_alignEnd="@+id/player8_8" />
+    </RelativeLayout>
+
+</LinearLayout>
