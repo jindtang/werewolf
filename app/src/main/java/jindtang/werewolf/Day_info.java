@@ -1,5 +1,6 @@
 package jindtang.werewolf;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -8,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
-public class Day_info extends ActionBarActivity {
+public class Day_info extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

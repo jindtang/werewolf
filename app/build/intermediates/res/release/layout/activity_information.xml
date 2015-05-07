@@ -24,7 +24,7 @@
             android:id="@+id/info_1"
             android:layout_below="@+id/textView9"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="66dp"
+            android:layout_marginTop="50dp"
             android:textSize="20dp"
             android:onClick="set"/>
 
@@ -35,6 +35,8 @@
             android:id="@+id/info_2"
             android:textSize="20dp"
             android:onClick="night"
+            android:layout_below="@+id/info_1"
+            android:layout_marginTop="45dp"
             android:layout_centerVertical="true"
             android:layout_alignLeft="@+id/info_1"
             android:layout_alignStart="@+id/info_1"
@@ -48,7 +50,7 @@
             android:id="@+id/info_3"
             android:textSize="20dp"
             android:onClick="daytime"
-            android:layout_marginTop="57dp"
+            android:layout_marginTop="45dp"
             android:layout_below="@+id/info_2"
             android:layout_alignLeft="@+id/info_2"
             android:layout_alignStart="@+id/info_2"
@@ -59,12 +61,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Victory"
+            android:textSize="20dp"
             android:id="@+id/info_4"
-            android:layout_alignParentBottom="true"
+            android:layout_marginTop="45dp"
+            android:layout_below="@+id/info_3"
             android:layout_alignRight="@+id/info_3"
             android:layout_alignEnd="@+id/info_3"
             android:layout_alignLeft="@+id/info_3"
             android:layout_alignStart="@+id/info_3"
             android:onClick="victory"/>
     </RelativeLayout>
-</LinearLayout><!-- From: file:/Users/Fang%20Tang/Dropbox/Spring%202015/Mobile%20Comp/AndroidProjects/Werewolf/app/src/main/res/layout/activity_information.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Lin/Dropbox/Werewolf/app/src/main/res/layout/activity_information.xml -->

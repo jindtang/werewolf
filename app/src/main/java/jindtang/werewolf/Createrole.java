@@ -2,12 +2,15 @@ package jindtang.werewolf;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.internal.view.menu.ActionMenuItemView;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -23,8 +26,6 @@ public class Createrole extends Activity {
     public final static String USER_NAME = "username";
     public final static String PLAYERID = "playerid";
     private Button oknext;
-//    private int activity_level;
-//    private int location;
 
     private SharedPreferences mPrefs;
     private Player players[];
@@ -36,25 +37,38 @@ public class Createrole extends Activity {
     private int w;
     private int v;
     private int s;
+    final Context context = this;
+    public boolean mSound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_createrole);
         mPrefs = getSharedPreferences("ttt_prefs", MODE_PRIVATE);
-
+        mSound = mPrefs.getBoolean("mSound", true);
+        this.setTitle("");
         read();
         num = 0;
         players = new Player[num_p];
         oknext = (Button) findViewById(R.id.oknext);
         oknext.setEnabled(false);
+
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_createrole, menu);
+        super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem mi = (MenuItem) menu.getItem(2);
+
+        if (mSound == false)
+            mi.setIcon(R.drawable.mute);
+        else
+            mi.setIcon(R.drawable.sound);
         return true;
     }
 
@@ -66,8 +80,24 @@ public class Createrole extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if(id == R.id.info){
+            Intent intent = new Intent(context, Information.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.new_game) {
+            Intent intent = new Intent(this, Startgame.class);
+            startActivity(intent);
             return true;
+        }
+        else if(id == R.id.sound){
+            mSound = !mSound;
+            if(mSound == false)
+                item.setIcon(getResources().getDrawable(R.drawable.mute));
+            else
+                item.setIcon(getResources().getDrawable(R.drawable.sound));
+            SharedPreferences.Editor ed = mPrefs.edit();
+            ed.putBoolean("mSound", mSound);
+            ed.apply();
         }
 
         return super.onOptionsItemSelected(item);
@@ -184,6 +214,7 @@ public class Createrole extends Activity {
         w = mPrefs.getInt("w", 2);
         s = mPrefs.getInt("s", 1);
         v = mPrefs.getInt("v", 0);
+        mSound = mPrefs.getBoolean("mSound", true);
     }
 
 }

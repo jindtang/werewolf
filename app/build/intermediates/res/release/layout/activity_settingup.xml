@@ -72,4 +72,4 @@
             android:layout_alignLeft="@+id/textView14"
             android:layout_alignStart="@+id/textView14" />
     </RelativeLayout>
-</LinearLayout><!-- From: file:/Users/Fang%20Tang/Dropbox/Spring%202015/Mobile%20Comp/AndroidProjects/Werewolf/app/src/main/res/layout/activity_settingup.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Lin/Dropbox/Werewolf/app/src/main/res/layout/activity_settingup.xml -->

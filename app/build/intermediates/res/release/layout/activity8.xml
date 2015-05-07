@@ -35,10 +35,10 @@
             android:id="@+id/killtext"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:visibility="invisible"
             android:gravity="center_horizontal"
             android:background="#ffffff"/>
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:text="player3"
             android:id="@+id/player3_8"
-            android:layout_marginTop="46dp"
+            android:layout_marginTop="30dp"
             android:layout_below="@+id/player1_8"
             android:layout_alignLeft="@+id/player1_8"
             android:layout_alignStart="@+id/player1_8" />
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="player5"
             android:id="@+id/player5_8"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_below="@+id/player3_8"
             android:layout_alignLeft="@+id/player3_8"
             android:layout_alignStart="@+id/player3_8" />
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:text="player7"
             android:id="@+id/player7_8"
-            android:layout_marginTop="46dp"
+            android:layout_marginTop="30dp"
             android:layout_below="@+id/player5_8"
             android:layout_alignLeft="@+id/player5_8"
             android:layout_alignStart="@+id/player5_8" />
@@ -128,7 +128,7 @@
             android:layout_height="wrap_content"
             android:text="Next"
             android:id="@+id/next"
-            android:layout_marginBottom="46dp"
+            android:layout_marginBottom="30dp"
             android:onClick="startGame"
             android:textSize="18dp"
             android:layout_alignParentBottom="true"
@@ -136,4 +136,4 @@
             android:layout_alignEnd="@+id/player8_8" />
     </RelativeLayout>
 
-</LinearLayout><!-- From: file:/Users/Fang%20Tang/Dropbox/Spring%202015/Mobile%20Comp/AndroidProjects/Werewolf/app/src/main/res/layout/activity8.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Lin/Dropbox/Werewolf/app/src/main/res/layout/activity8.xml -->

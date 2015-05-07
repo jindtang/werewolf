@@ -3,5 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context="jindtang.werewolf.Daytime">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id = "@+id/end_game"
+        android:title = "New Game"
+        android:icon = "@drawable/end_game"
+        app:showAsAction="always"/>
 </menu>
 <!-- From: file:/C:/Users/Lin/Dropbox/Werewolf/app/src/main/res/menu/menu_daytime.xml -->

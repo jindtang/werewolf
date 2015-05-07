@@ -1,5 +1,5 @@
-/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/classes/debug
-/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-faa2c80042f02708d34d55909f352f200cab861e.jar
-/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-01f16a4593bbd1139115670e2db6b75a905a9dd5.jar
-/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/debug/classes-bfa3373c51dfb4e3f42467d440cfb457e9362099.jar
-/Users/Fang Tang/Dropbox/Spring 2015/Mobile Comp/AndroidProjects/Werewolf/app/build/intermediates/pre-dexed/debug/classes-8266b3d03ff083188a127f3fa670ccf93a9401a3.jar
+C:\Users\Lin\Dropbox\Werewolf\app\build\intermediates\classes\debug
+C:\Users\Lin\Dropbox\Werewolf\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-cd8dbc18562acb3c482bd04ded41194e3aa851d8.jar
+C:\Users\Lin\Dropbox\Werewolf\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-7abdff63ccc0252e1ca947398592390ee341e741.jar
+C:\Users\Lin\Dropbox\Werewolf\app\build\intermediates\pre-dexed\debug\classes-99f1e84b9c3e39f23678feb9fc09cf3497da1cc2.jar
+C:\Users\Lin\Dropbox\Werewolf\app\build\intermediates\pre-dexed\debug\classes-cfe1d890e1fa47ffcbd69cdd6541f91e9de0aecb.jar

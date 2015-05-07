@@ -1,6 +1,7 @@
 package jindtang.werewolf;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,8 +9,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.internal.view.menu.ActionMenuItemView;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -18,18 +22,26 @@ import android.widget.TextView;
 /**
  * Created by Fang Tang on 4/1/15.
  */
-public class DisplayActivity extends FragmentActivity {
+public class DisplayActivity extends ActionBarActivity {
 
     private static final String TAG = "DisplayActivity";
     public static final int GET_NAME = 100;
+    public static final int NIGHT = 200;
+    public static final int WEREWOLF = 210;
+    public static final int SEER = 220;
+    public static final int DAY = 300;
     public static final int DEAD = -1;
+
+    private int request;
 
     final Context context = this;
     private boolean paused = false;
 
     private static WerewolfGame game;
     private static boolean day_time = false;
-    private static boolean killing = false;
+    private static boolean killing = true;
+    private static boolean shouldResume;
+    private static int character = 0;
     private int turn = 0;
     private SharedPreferences mPrefs;
     private Button next;
@@ -46,12 +58,17 @@ public class DisplayActivity extends FragmentActivity {
     private int num_s;
     private int num_v;
     private boolean done = false;
+    public boolean mSound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate");
         mPrefs = getSharedPreferences("ttt_prefs", MODE_PRIVATE);
+        mSound = mPrefs.getBoolean("mSound", true);
+        shouldResume = true;
+        day_time = false;
+        killing = true;
         read();
 
         loadLayout();
@@ -66,6 +83,7 @@ public class DisplayActivity extends FragmentActivity {
 
         next = (Button) findViewById(R.id.next);
         next.setVisibility(View.INVISIBLE);
+
     }
 
     @Override
@@ -73,19 +91,9 @@ public class DisplayActivity extends FragmentActivity {
         super.onResume();  // Always call the superclass method first
 
         Log.d(TAG, "The activity has resumed");
-        if (killing) {
-            TextView text = (TextView) findViewById(R.id.killtext);
-            text.setVisibility(View.VISIBLE);
-            Button next = (Button) findViewById(R.id.next);
-            next.setVisibility(View.INVISIBLE);
-            for (int i = 0; i < buttons.length; i++) {
-                if (!buttons[i].getText().equals("DEAD"))
-                    buttons[i].setEnabled(true);
-                buttons[i].setOnClickListener(new ButtonClickListener(i));
-            }
-            killing = false;
-        }
-        else {
+
+        if (shouldResume && request < 200) {
+            Log.d(TAG, "Changing button to disable");
             TextView text = (TextView) findViewById(R.id.killtext);
             text.setVisibility(View.INVISIBLE);
             if (turn > 0 || allPlayerSelected()) {
@@ -93,21 +101,99 @@ public class DisplayActivity extends FragmentActivity {
                 next.setVisibility(View.VISIBLE);
             }
         }
+        else {
+            switch (request) {
+                case DAY:
+                case WEREWOLF:
+                    setTextAndButton(getString(R.string.werewolf_text));
+                    break;
+                case SEER:
+                    setTextAndButton(getString(R.string.seer_text));
+                    break;
+            }
+        }
+
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent;
+        Log.d(TAG, "back button pressed with request " + request );
+        switch (request) {
+            case WEREWOLF:
+                intent = new Intent(this, Night.class);
+                startActivity(intent);
+//                request = 0;
+                break;
+            case SEER:
+                intent = new Intent(this, Seer.class);
+                startActivity(intent);
+//                request = 0;
+                break;
+            case DAY:
+                intent = new Intent(this, Daytime.class);
+                startActivity(intent);
+//                request = 0;
+                break;
+            default:
+                super.onBackPressed();
+        }
+
+    }
+
 
     @Override
     public void onPause() {
         super.onPause();  // Always call the superclass method first
 
-        Log.d(TAG, "The activity has paused");
+        Log.d(TAG, "The activity DisplayActivity paused");
 
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_night, menu);
+        super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem mi = (MenuItem) menu.getItem(2);
+
+        if (mSound == false)
+            mi.setIcon(R.drawable.mute);
+        else
+            mi.setIcon(R.drawable.sound);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if(id == R.id.info){
+            Intent intent = new Intent(context, Information.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.new_game) {
+            Intent intent = new Intent(this, Startgame.class);
+            startActivity(intent);
+            return true;
+        }
+        else if(id == R.id.sound){
+            mSound = !mSound;
+            if(mSound == false)
+                ((ActionMenuItemView) this.findViewById(R.id.sound)).setIcon(getResources().getDrawable(R.drawable.mute));
+            else
+                ((ActionMenuItemView) this.findViewById(R.id.sound)).setIcon(getResources().getDrawable(R.drawable.sound));
+            SharedPreferences.Editor ed = mPrefs.edit();
+            ed.putBoolean("mSound", mSound);
+            ed.apply();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public boolean allPlayerSelected() {
@@ -137,18 +223,56 @@ public class DisplayActivity extends FragmentActivity {
                 Log.d(TAG, "Killing the player at: " + location);
                 Button b = (Button) view;
                 String s = b.getText().toString();
-                checkrole(s);
-                buttons[location].setText("DEAD");
+//                if(character == 2){
+//                    showdia();
+//                }
+//                else {
+//                AlertDialog dialog;
+                switch (request) {
+                    case DAY:
+                    case WEREWOLF:
+                        buttons[location].setText("DEAD");
+                        checkrole(s);
+                        break;
+                    case SEER:
+                        showdia(buttons[location]);
+                        break;
+                }
+
+//                }
                 changeButtonsStatus(false);
                 v = view;
                 new Handler().postDelayed(new Runnable() {
-                                            public void run()  {
-                                                startGame(v);
-                                            }
-                                        }, 750);
+                    public void run() {
+                        startGame(v);
+                    }
+                }, 900);
 
             }
         }
+    }
+
+    public void showdia(Button b){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        String s = b.getText().toString()+"role";
+        int r = mPrefs.getInt(s, 0);
+        if(r == 2)
+            builder.setMessage("This player is a Werewolf");
+        else
+            builder.setMessage("This player is Innocent");
+        builder.setCancelable(false);
+        final AlertDialog dialog = builder.create();
+
+        dialog.show();
+
+        Handler mHandler = new Handler();
+        Runnable mRunnable = new Runnable () {
+
+            public void run() {
+                if(dialog != null && dialog.isShowing()) dialog.dismiss();
+            }
+        };
+        mHandler.postDelayed(mRunnable, 1000);
     }
 
     // Function to read the result from newly created activity
@@ -156,15 +280,40 @@ public class DisplayActivity extends FragmentActivity {
     protected void onActivityResult(int requestCode,
                                     int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Log.d(TAG, "back from activity result with code " + requestCode);
+        request = requestCode;
         if(resultCode == GET_NAME){
-
+            Log.d(TAG, "Activity result get name");
             // Storing result in names
             int location = data.getExtras().getInt("location");
             names[location] = (String) data.getExtras().get(Createrole.USER_NAME);
             buttons[location].setText(names[location]);
             buttons[location].setEnabled(false);
         }
+        if (resultCode == WEREWOLF || requestCode == DAY) {
+            Log.d(TAG, "Activity result killing");
+            setTextAndButton(getString(R.string.werewolf_text));
+            shouldResume = false;
+        }
+        if (resultCode == SEER ) {
+            Log.d(TAG, "Activity result seer");
+            setTextAndButton(getString(R.string.seer_text));
+            shouldResume = false;
+        }
 
+    }
+
+    public void setTextAndButton(String message) {
+        TextView text = (TextView) findViewById(R.id.killtext);
+        text.setText(message);
+        text.setVisibility(View.VISIBLE);
+        Button next = (Button) findViewById(R.id.next);
+        next.setVisibility(View.INVISIBLE);
+        for (int i = 0; i < buttons.length; i++) {
+            if (!buttons[i].getText().equals("DEAD"))
+                buttons[i].setEnabled(true);
+            buttons[i].setOnClickListener(new ButtonClickListener(i));
+        }
     }
 
     public void checkrole(String s){
@@ -264,16 +413,29 @@ public class DisplayActivity extends FragmentActivity {
         killing = kill;
     }
 
+    public static void setChar(int c) {
+        character = c;
+    }
+
     public void startGame(View view) {
+        int requestCode;
         Intent intent;
 //        Intent intent = new Intent(this, Transition.class);
 //        intent.putExtra(MainActivity.ID, activity_level);
 //        intent.putExtra("turn", turn);
         if (!day_time) {
-            intent = new Intent(this, Night.class);
+//            day_time = true;
+            if (killing) {
+                intent = new Intent(this, Night.class);
+                requestCode = WEREWOLF;
+            }
+            else {
+                intent = new Intent(this, Seer.class);
+                requestCode = SEER;
+            }
             intent.putExtra(MainActivity.ID, activity_level);
             intent.putExtra("turn", turn);
-            day_time = true;
+            intent.putExtra("killing", killing);
             turn++;
         }
         else {
@@ -281,8 +443,9 @@ public class DisplayActivity extends FragmentActivity {
             intent.putExtra(MainActivity.ID, activity_level);
             intent.putExtra("turn", turn);
             day_time = false;
+            requestCode = DAY;
         }
-        startActivity(intent);
+        startActivityForResult(intent, requestCode);
     }
 
     public void read(){

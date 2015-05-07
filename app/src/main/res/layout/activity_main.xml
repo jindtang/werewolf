@@ -63,17 +63,5 @@
         android:layout_alignLeft="@+id/activity9"
         android:layout_alignStart="@+id/activity9" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="!"
-        android:id="@+id/info"
-        android:layout_alignTop="@+id/activity6"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
-        android:textSize="30dp"
-        android:textColor="#ffff1a00"
-        android:background="@drawable/roundbutton"
-        android:onClick="info"/>
 
 </RelativeLayout>

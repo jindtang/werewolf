@@ -21,33 +21,34 @@
         <activity
             android:name="jindtang.werewolf.DisplayActivity"
             android:label="@string/user_activity_display"
-            android:parentActivityName="jindtang.werewolf.MainActivity"
             android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="jindtang.werewolf.MainActivity" />
+
+            <!-- <meta-data -->
+            <!-- android:name="android.support.PARENT_ACTIVITY" -->
+            <!-- android:value="jindtang.werewolf.MainActivity" /> -->
         </activity>
         <activity
             android:name="jindtang.werewolf.Daytime"
             android:label="@string/title_activity_daytime"
-            android:parentActivityName="jindtang.werewolf.DisplayActivity"
             android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="jindtang.werewolf.DisplayActivity" />
+
+            <!-- <meta-data -->
+            <!-- android:name="android.support.PARENT_ACTIVITY" -->
+            <!-- android:value="jindtang.werewolf.DisplayActivity" /> -->
         </activity>
         <activity
             android:name="jindtang.werewolf.Night"
             android:label="@string/title_activity_night"
-            android:parentActivityName="jindtang.werewolf.DisplayActivity"
             android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="jindtang.werewolf.DisplayActivity" />
+
+            <!-- <meta-data -->
+            <!-- android:name="android.support.PARENT_ACTIVITY" -->
+            <!-- android:value="jindtang.werewolf.DisplayActivity" /> -->
         </activity>
         <activity
             android:name="jindtang.werewolf.Createrole"
-            android:label="@string/title_activity_createrole" >
+            android:label="@string/title_activity_createrole"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="jindtang.werewolf.Startgame"
@@ -61,31 +62,43 @@
         </activity>
         <activity
             android:name="jindtang.werewolf.Information"
-            android:label="@string/title_activity_information" >
+            android:label="@string/title_activity_information"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="jindtang.werewolf.Settingup"
-            android:label="@string/title_activity_settingup" >
+            android:label="@string/title_activity_settingup"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="jindtang.werewolf.Night_info"
-            android:label="@string/title_activity_night_info" >
+            android:label="@string/title_activity_night_info"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="jindtang.werewolf.Day_info"
-            android:label="@string/title_activity_day_info" >
+            android:label="@string/title_activity_day_info"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="jindtang.werewolf.Victory"
-            android:label="@string/title_activity_victory" >
+            android:label="@string/title_activity_victory"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="jindtang.werewolf.Winner_w"
-            android:label="@string/title_activity_winner_w" >
+            android:label="@string/title_activity_winner_w"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="jindtang.werewolf.Winner_v"
-            android:label="@string/title_activity_winner_v" >
+            android:label="@string/title_activity_winner_v"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="jindtang.werewolf.Seer"
+            android:label="@string/title_activity_seer"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

@@ -6,15 +6,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.internal.view.menu.ActionMenuItem;
+import android.support.v7.internal.view.menu.ActionMenuItemView;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
     private static final String TAG = "MainActivity";
     public static final String ID = "IDTag";
@@ -29,6 +32,7 @@ public class MainActivity extends Activity {
     private int num_w = 2;
     private int num_s = 1;
     private int num_v;
+    public boolean mSound = true;
 
     //Buttons making up the number of Player
     private Button playerButtons[];
@@ -39,9 +43,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//        this.setTitle("");
         mPrefs = getSharedPreferences("ttt_prefs", MODE_PRIVATE);
-
+        mSound = mPrefs.getBoolean("mSound", true);
 
         playerButtons = new Button[NUM_BUTTONS];
         for (int i = 0; i < playerButtons.length; i++) {
@@ -49,13 +53,20 @@ public class MainActivity extends Activity {
             playerButtons[i].setEnabled(true);
             playerButtons[i].setOnClickListener(new ButtonClickListener(i));
         }
-
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem mi = (MenuItem) menu.getItem(2);
+
+        if (mSound == false)
+            mi.setIcon(R.drawable.mute);
+        else
+            mi.setIcon(R.drawable.sound);
         return true;
     }
 
@@ -67,8 +78,24 @@ public class MainActivity extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if(id == R.id.info){
+            Intent intent = new Intent(context, Information.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.new_game) {
+            Intent intent = new Intent(this, Startgame.class);
+            startActivity(intent);
             return true;
+        }
+        else if(id == R.id.sound){
+            mSound = !mSound;
+            if(mSound == false)
+                ((ActionMenuItemView) this.findViewById(R.id.sound)).setIcon(getResources().getDrawable(R.drawable.mute));
+            else
+                ((ActionMenuItemView) this.findViewById(R.id.sound)).setIcon(getResources().getDrawable(R.drawable.sound));
+            SharedPreferences.Editor ed = mPrefs.edit();
+            ed.putBoolean("mSound", mSound);
+            ed.apply();
         }
 
         return super.onOptionsItemSelected(item);
@@ -93,12 +120,6 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-//    public void setNum(int i){
-//        Button b = (Button) view;
-//        String s = b.getText().toString();
-//        num_p = Integer.parseInt(s);
-//    }
-
     public void save(){
         SharedPreferences.Editor ed = mPrefs.edit();
         ed.putInt("num_p", num_p);
@@ -110,6 +131,7 @@ public class MainActivity extends Activity {
         ed.putInt("v", num_v);
         ed.putInt("num_v", num_v);
         ed.putInt("num", 0);
+        ed.putBoolean("mSound", mSound);
         ed.apply();
     }
 

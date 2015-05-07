@@ -2,22 +2,25 @@
 <resources>
 
     <string name="app_name">Ultimate Werewolf</string>
-    <string name="user_activity_display">User Select</string>
+    <string name="user_activity_display">User Information</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_night">Night</string>
+    <string name="title_activity_night">Werewolf</string>
     <string name="title_activity_daytime">Daytime</string>
-    <string name="title_activity_createrole">createrole</string>
-    <string name="title_activity_startgame">startgame</string>
+    <string name="title_activity_createrole">Get Role</string>
+    <string name="title_activity_startgame">Start Game</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_information">Information</string>
-    <string name="title_activity_settingup">Settingup</string>
-    <string name="title_activity_night_info">Night_info</string>
-    <string name="title_activity_day_info">Day_info</string>
+    <string name="title_activity_settingup">Setting Up</string>
+    <string name="title_activity_night_info">Night Information</string>
+    <string name="title_activity_day_info">Day Information</string>
     <string name="title_activity_victory">Victory</string>
-    <string name="title_activity_winner_w">Winner_w</string>
-    <string name="title_activity_winner_v">Winner_v</string>
+    <string name="title_activity_winner_w">Werewolf Wins</string>
+    <string name="title_activity_winner_v">Innocent Wins</string>
     <string name="title_activity_transition">Transition</string>
     <string name="new_game">New Game</string>
+    <string name="title_activity_seer">Seer</string>
+    <string name="werewolf_text">Click on the player who has to be killed</string>
+    <string name="seer_text">Choose a player to determine the werewolf</string>
 
 </resources>

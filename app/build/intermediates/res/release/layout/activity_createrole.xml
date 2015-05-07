@@ -27,11 +27,12 @@
             android:text="Enter Name:"
             android:id="@+id/textView8"
             android:layout_marginTop="50dp"
-            android:background="#ffffff"
             android:textSize="24dp"
             android:layout_below="@+id/textView7"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:background="#07000000"
+            android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/name"
@@ -69,4 +70,4 @@
 
     </RelativeLayout>
 </RelativeLayout>
-<!-- From: file:/Users/Fang%20Tang/Dropbox/Spring%202015/Mobile%20Comp/AndroidProjects/Werewolf/app/src/main/res/layout/activity_createrole.xml -->
+<!-- From: file:/C:/Users/Lin/Dropbox/Werewolf/app/src/main/res/layout/activity_createrole.xml -->

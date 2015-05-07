@@ -15,33 +15,31 @@
         <activity
             android:name=".DisplayActivity"
             android:label="@string/user_activity_display"
-            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="jindtang.werewolf.MainActivity" />
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value="jindtang.werewolf.MainActivity" />-->
         </activity>
         <activity
             android:name=".Daytime"
             android:label="@string/title_activity_daytime"
-            android:parentActivityName=".DisplayActivity"
             android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="jindtang.werewolf.DisplayActivity" />
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value="jindtang.werewolf.DisplayActivity" />-->
         </activity>
         <activity
             android:name=".Night"
             android:label="@string/title_activity_night"
-            android:parentActivityName=".DisplayActivity"
             android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="jindtang.werewolf.DisplayActivity" />
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value="jindtang.werewolf.DisplayActivity" />-->
         </activity>
         <activity
             android:name=".Createrole"
-            android:label="@string/title_activity_createrole" >
+            android:label="@string/title_activity_createrole"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Startgame"
@@ -55,31 +53,43 @@
         </activity>
         <activity
             android:name=".Information"
-            android:label="@string/title_activity_information" >
+            android:label="@string/title_activity_information"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Settingup"
-            android:label="@string/title_activity_settingup" >
+            android:label="@string/title_activity_settingup"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Night_info"
-            android:label="@string/title_activity_night_info" >
+            android:label="@string/title_activity_night_info"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Day_info"
-            android:label="@string/title_activity_day_info" >
+            android:label="@string/title_activity_day_info"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Victory"
-            android:label="@string/title_activity_victory" >
+            android:label="@string/title_activity_victory"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Winner_w"
-            android:label="@string/title_activity_winner_w" >
+            android:label="@string/title_activity_winner_w"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Winner_v"
-            android:label="@string/title_activity_winner_v" >
+            android:label="@string/title_activity_winner_v"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Seer"
+            android:label="@string/title_activity_seer"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
